@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent= new Intent(MainActivity.this, Gallery.class);
-            myIntent.putExtra("photo", 1);
+            myIntent.putExtra("photo", position+1);
             startActivity(myIntent);
             }
         });

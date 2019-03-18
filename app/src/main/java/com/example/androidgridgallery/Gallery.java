@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
+import java.util.Set;
+
 public class Gallery extends FragmentActivity {
 
     ViewPager myView;
@@ -17,6 +19,7 @@ public class Gallery extends FragmentActivity {
         Intent prev=getIntent();
 
         myView=findViewById(R.id.vp);
+
         int setter=prev.getIntExtra("photo",1);
         SwipeAdapter myAdapter = new SwipeAdapter(getSupportFragmentManager());
         myView.setAdapter(myAdapter);
